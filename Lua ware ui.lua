@@ -177,7 +177,7 @@ function library.new(library, name, theme)
     local TabBtnsL = Instance.new("UIListLayout")
     local ScriptTitle = Instance.new("TextLabel")
     local SBG = Instance.new("UIGradient")
-    local Open = Instance.new("TextButton")
+    local Open = Instance.new("ImageButton")
     local UIG = Instance.new("UIGradient")
     local DropShadowHolder = Instance.new("Frame")
     local DropShadow = Instance.new("ImageLabel")
@@ -484,21 +484,45 @@ function library.new(library, name, theme)
             TabBtns.CanvasSize = UDim2.new(0, 0, 0, TabBtnsL.AbsoluteContentSize.Y + 18)
         end
     )
-    Open.Name = "Open"
+
+ayg = 0
+image0 = "rbxassetid://18145057771"
+image1 = "rbxassetid://18145064703"
+image2 = "rbxassetid://18145068529"
+image3 = "rbxassetid://18145069451"
+image4 = "rbxassetid://18145071634"
+
+Open.Name = "Open"
 Open.Parent = dogent
 Open.BackgroundColor3 = Color3.fromRGB(28, 33, 55)
 Open.BackgroundTransparency = 0 -- 调整按钮的透明度，0为完全不透明，1为完全透明
 Open.Position = UDim2.new(0.00829315186, 0, 0.31107837, 0)
-Open.Size = UDim2.new(0, 61, 0, 32)
-Open.Font = Enum.Font.SourceSans
-Open.Text = "隐藏/打开"
-Open.TextColor3 = Color3.fromRGB(255, 255, 255)
-Open.TextTransparency = 0 -- 文字的透明度，0为完全不透明，1为完全透明
-Open.TextSize = 14.000
+Open.Size = UDim2.new(0, 64, 0, 64)
 Open.Active = true
 Open.Draggable = true
+Open.Image = image0
 Open.MouseButton1Click:Connect(function()
-    Main.Visible = not Main.Visible
+    if ayg == 0 then
+        Open.Image = image0
+        Main.Visible = not Main.Visible
+        ayg = ayg + 1
+    elseif ayg == 1 then
+        Open.Image = image1
+        Main.Visible = not Main.Visible
+        ayg = ayg + 1
+    elseif ayg == 2 then
+        Open.Image = image2
+        Main.Visible = not Main.Visible
+        ayg = ayg + 1
+    elseif ayg == 3 then
+        Open.Image = image3
+        Main.Visible = not Main.Visible
+        ayg = ayg + 1
+    elseif ayg == 4 then
+        Open.Image = image4
+        Main.Visible = not Main.Visible
+        ayg = 0
+    end
 end)
     UIG.Parent = Open
     local window = {}
