@@ -244,31 +244,13 @@ function library.new(library, name, theme)
     DropShadow.Parent = DropShadowHolder
     DropShadow.AnchorPoint = Vector2.new(0.5, 0.5)
     DropShadow.BackgroundTransparency = 1.000
-    DropShadow.BorderSizePixel = 0
     DropShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
-    DropShadow.Size = UDim2.new(1, 43, 1, 43)
-    DropShadow.ZIndex = 0
-    DropShadow.Image = "rbxassetid://6015897843"
-    DropShadow.ImageColor3 = Color3.fromRGB(255, 255, 255)
-    DropShadow.ImageTransparency = 0.500
-    DropShadow.ScaleType = Enum.ScaleType.Slice
+    DropShadow.Size = UDim2.new(1, 10, 1, 10)
+    DropShadow.Image = "rbxassetid://18145951260"
+    DropShadow.ImageColor3 = Color3.fromRGB(255,255,255)
     DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
 
-    UIGradient.Color =
-        ColorSequence.new {
-        ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)),
-        ColorSequenceKeypoint.new(0.10, Color3.fromRGB(255, 127, 0)),
-        ColorSequenceKeypoint.new(0.20, Color3.fromRGB(255, 255, 0)),
-        ColorSequenceKeypoint.new(0.30, Color3.fromRGB(0, 255, 0)),
-        ColorSequenceKeypoint.new(0.40, Color3.fromRGB(0, 255, 255)),
-        ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 0, 255)),
-        ColorSequenceKeypoint.new(0.60, Color3.fromRGB(139, 0, 255)),
-        ColorSequenceKeypoint.new(0.70, Color3.fromRGB(255, 0, 0)),
-        ColorSequenceKeypoint.new(0.80, Color3.fromRGB(255, 127, 0)),
-        ColorSequenceKeypoint.new(0.90, Color3.fromRGB(255, 255, 0)),
-        ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 255, 0))
-    }
-    UIGradient.Parent = DropShadow
+    UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.10, Color3.fromRGB(255, 127, 0)), ColorSequenceKeypoint.new(0.20, Color3.fromRGB(255, 255, 0)), ColorSequenceKeypoint.new(0.30, Color3.fromRGB(0, 255, 0)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(0, 255, 255)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 0, 255)), ColorSequenceKeypoint.new(0.60, Color3.fromRGB(139, 0, 255)), ColorSequenceKeypoint.new(0.70, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.80, Color3.fromRGB(255, 127, 0)), ColorSequenceKeypoint.new(0.90, Color3.fromRGB(255, 255, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 255, 0))}
 
     local TweenService = game:GetService("TweenService")
     local tweeninfo = TweenInfo.new(7, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
@@ -308,6 +290,7 @@ function library.new(library, name, theme)
     SB.Parent = Main
     SB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     SB.BorderColor3 = MainColor
+    SB.Transparency = 1.0
     SB.Size = UDim2.new(0, 8, 0, 353)
 
     SBC.CornerRadius = UDim.new(0, 6)
@@ -322,6 +305,7 @@ function library.new(library, name, theme)
     Side.ClipsDescendants = true
     Side.Position = UDim2.new(1, 0, 0, 0)
     Side.Size = UDim2.new(0, 110, 0, 353)
+    Side.Transparency = 1.0
 
     SideG.Color = ColorSequence.new {ColorSequenceKeypoint.new(0.00, zyColor), ColorSequenceKeypoint.new(1.00, zyColor)}
     SideG.Rotation = 90
@@ -359,6 +343,7 @@ function library.new(library, name, theme)
 
     UIGradientTitle.Parent = ScriptTitle
 
+    --[[
     local function NPLHKB_fake_script()
         local script = Instance.new("LocalScript", ScriptTitle)
 
@@ -473,7 +458,7 @@ function library.new(library, name, theme)
         animate()
     end
     coroutine.wrap(NPLHKB_fake_script)()
-
+]]
     SBG.Color = ColorSequence.new {ColorSequenceKeypoint.new(0.00, zyColor), ColorSequenceKeypoint.new(1.00, zyColor)}
     SBG.Rotation = 90
     SBG.Name = "SBG"
@@ -485,46 +470,52 @@ function library.new(library, name, theme)
         end
     )
 
+--[[
 ayg = 0
 image0 = "rbxassetid://18145057771"
 image1 = "rbxassetid://18145064703"
 image2 = "rbxassetid://18145068529"
 image3 = "rbxassetid://18145069451"
 image4 = "rbxassetid://18145071634"
+]]
+
+frequency = 1
+iron = "rbxassetid://18145359961"
+gold = "rbxassetid://18145359473"
+diamond = "rbxassetid://18145258580"
+emerald = "rbxassetid://18145361041"
+
 
 Open.Name = "Open"
 Open.Parent = dogent
 Open.BackgroundColor3 = Color3.fromRGB(28, 33, 55)
 Open.BackgroundTransparency = 0 -- 调整按钮的透明度，0为完全不透明，1为完全透明
-Open.Position = UDim2.new(0.00829315186, 0, 0.31107837, 0)
-Open.Size = UDim2.new(0, 64, 0, 64)
+Open.Position = UDim2.new(0.00829315186, 0, 0.13107837, 0)
+Open.Size = UDim2.new(0, 32, 0, 32)
 Open.Active = true
 Open.Draggable = true
-Open.Image = image0
+Open.Image = iron
 Open.MouseButton1Click:Connect(function()
-    if ayg == 0 then
-        Open.Image = image0
+    if frequency == 1 then
+        Open.Image = iron
         Main.Visible = not Main.Visible
-        ayg = ayg + 1
-    elseif ayg == 1 then
-        Open.Image = image1
+        frequency = frequency + 1
+    elseif frequency == 2 then
+        Open.Image = gold
         Main.Visible = not Main.Visible
-        ayg = ayg + 1
-    elseif ayg == 2 then
-        Open.Image = image2
+        frequency = frequency + 1
+    elseif frequency == 3 then
+        Open.Image = diamond
         Main.Visible = not Main.Visible
-        ayg = ayg + 1
-    elseif ayg == 3 then
-        Open.Image = image3
+        frequency = frequency + 1
+    elseif frequency == 4 then
+        Open.Image = emerald
         Main.Visible = not Main.Visible
-        ayg = ayg + 1
-    elseif ayg == 4 then
-        Open.Image = image4
-        Main.Visible = not Main.Visible
-        ayg = 0
+        frequency = 1
     end
 end)
     UIG.Parent = Open
+    
     local window = {}
     function window.Tab(window, name, icon)
         local Tab = Instance.new("ScrollingFrame")
@@ -548,7 +539,7 @@ end)
         TabIco.BorderSizePixel = 0
         TabIco.Size = UDim2.new(0, 24, 0, 24)
         TabIco.Image = ("rbxassetid://%s"):format((icon or 4370341699))
-        TabIco.ImageTransparency = 0.2
+        --TabIco.ImageTransparency = 0.2
 
         TabText.Name = "TabText"
         TabText.Parent = TabIco
