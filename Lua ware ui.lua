@@ -241,7 +241,7 @@ function library.new(library, name, theme)
     DropShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
     DropShadow.Size = UDim2.new(1, 10, 1, 10)
     DropShadow.Image = "rbxassetid://18153489737"
-    DropShadow.ImageTransparency = 0.25
+    DropShadow.ImageTransparency = 0.35
     DropShadow.ImageColor3 = Color3.fromRGB(255,255,255)
     DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
 
