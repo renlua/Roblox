@@ -1,4 +1,4 @@
-notify = function(...)
+_G.notify = function(...)
     local GUI = game:GetService("CoreGui"):FindFirstChild("STX_Nofitication")
     if not GUI then
         local STX_Nofitication = Instance.new("ScreenGui")
